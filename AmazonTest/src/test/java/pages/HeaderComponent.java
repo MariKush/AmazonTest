@@ -8,16 +8,46 @@ import static org.openqa.selenium.Keys.ENTER;
 
 public class HeaderComponent extends BasePage{
 
+    @FindBy(xpath = "//input[@id='twotabsearchtextbox']")
+    private WebElement searchInput;
+
+    @FindBy(xpath = "//div[@id='nav-xshop']/a[contains(text(),'Deals')]")
+    private WebElement dealsLink;
+
+    @FindBy(xpath = "//span[@id='nav-cart-count']")
+    private WebElement amountOfProductsInCart;
+
+    @FindBy(xpath = "//a[@id='nav-cart']")
+    private WebElement cartButton;
+
     public HeaderComponent(WebDriver driver) {
         super(driver);
     }
 
-    @FindBy(xpath = "//input[@id='twotabsearchtextbox']")
-    private WebElement searchInput;
-
     public void enterTextIntoSearchInput(String text){
         searchInput.sendKeys(text, ENTER);
     }
+
+    public void clickOnTheDealsLink(){
+        dealsLink.click();
+    }
+
+    public String getAmountOfProductsInCart() {
+        return amountOfProductsInCart.getText();
+    }
+
+    public WebElement getWebElementWithAmountOfProductsInCart(){
+        return amountOfProductsInCart;
+    }
+
+    public void clickOnTheCartButton(){
+        cartButton.click();
+    }
+
+    public WebElement getCartButton(){
+        return cartButton;
+    }
+
 
 
 }
