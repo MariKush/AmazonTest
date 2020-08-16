@@ -11,7 +11,6 @@ public class SearchTest extends BaseTest {
     private static final String NON_EXISTENT_SEARCH_WORD = "qwertyuiopasdf";
 
 
-
     @Test
     public void checkThatUrlContainsSearchWord() {
         getHeaderComponent().enterTextIntoSearchInput(EXISTENT_SEARCH_WORD);

@@ -36,6 +36,10 @@ public class BaseTest {
         return new CartPage(driver);
     }
 
+    public SignInPage getSignInPage(){
+        return new SignInPage(driver);
+    }
+
     public SearchedPage getSearchedPage(){
         return new SearchedPage(driver);
     }

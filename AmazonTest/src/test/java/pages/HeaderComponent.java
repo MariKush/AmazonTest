@@ -20,6 +20,9 @@ public class HeaderComponent extends BasePage{
     @FindBy(xpath = "//a[@id='nav-cart']")
     private WebElement cartButton;
 
+    @FindBy(xpath = "//a[@id='nav-link-accountList']")
+    private WebElement accountButton;
+
     public HeaderComponent(WebDriver driver) {
         super(driver);
     }
@@ -46,6 +49,10 @@ public class HeaderComponent extends BasePage{
 
     public WebElement getCartButton(){
         return cartButton;
+    }
+
+    public void clickOnTheAccountButton(){
+        accountButton.click();
     }
 
 
