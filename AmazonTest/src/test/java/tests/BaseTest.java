@@ -44,6 +44,10 @@ public class BaseTest {
         return new SearchedPage(driver);
     }
 
+    public ChooseOptionsPopUpComponent getChooseOptionsPopUpComponent(){
+        return new ChooseOptionsPopUpComponent(driver);
+    }
+
     @BeforeTest
     public void profileSetUp() {
         System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");

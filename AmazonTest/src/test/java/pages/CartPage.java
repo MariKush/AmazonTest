@@ -12,8 +12,8 @@ public class CartPage extends BasePage {
     @FindBy(xpath = "//div[@class='a-popover-wrapper']")
     private WebElement quantityDropDownList;
 
-    @FindBy(xpath = "//a[@id='dropdown1_3']")
-    private WebElement threeItemsFromTheDropDownListOfQuantity;
+    @FindBy(xpath = "//a[@id='dropdown1_2']")
+    private WebElement twoItemsFromTheDropDownListOfQuantity;
 
     @FindBy(xpath = "//span[@class='a-dropdown-prompt']")
     private WebElement valueQuantityOfItemsField;
@@ -54,8 +54,8 @@ public class CartPage extends BasePage {
         return quantityDropDownList;
     }
 
-    public void clickOnTheThreeItemsFromTheDropDownListOfQuantity() {
-        threeItemsFromTheDropDownListOfQuantity.click();
+    public void clickOnTheTwoItemsFromTheDropDownListOfQuantity() {
+        twoItemsFromTheDropDownListOfQuantity.click();
     }
 
     public String getValueQuantityOfItems() {
@@ -68,6 +68,10 @@ public class CartPage extends BasePage {
 
     public String getPricePerAll() {
         return pricePerAllField.getText().replaceAll("[^\\d.]", "");
+    }
+
+    public WebElement getPricePerAllWebElement(){
+        return pricePerAllField;
     }
 
     public void clickOnTheDeleteButton() {

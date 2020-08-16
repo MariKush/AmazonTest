@@ -33,12 +33,8 @@ public class DealsAndPromotionsPage extends BasePage {
         super(driver);
     }
 
-    public void clickOnAllAddToCartButtons() {
-        for (WebElement webElement : addToCartButtons) {
-            //webElement.findElement(By.xpath("xpath"));
-            scrollToElement(webElement);
-            webElement.click();
-        }
+    public WebElement getFirstChooseOptionsButton() {
+        return firstChooseOptionsButton;
     }
 
     public int getNumberOfAddToCartButtonsOnThePage() {
@@ -50,6 +46,7 @@ public class DealsAndPromotionsPage extends BasePage {
     }
 
     public void clickOnTheFirstChooseOptionsButton() {
+        scrollToElement(firstChooseOptionsButton);
         firstChooseOptionsButton.click();
     }
 
@@ -73,11 +70,11 @@ public class DealsAndPromotionsPage extends BasePage {
         return sortByButton;
     }
 
-    public void clickOnTheFrom50To100DollarsButton(){
+    public void clickOnTheFrom50To100DollarsButton() {
         from50To100DollarsButton.click();
     }
 
-    public WebElement getFrom50To100DollarsButton(){
+    public WebElement getFrom50To100DollarsButton() {
         return from50To100DollarsButton;
     }
 

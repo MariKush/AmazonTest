@@ -2,9 +2,8 @@ package tests;
 
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-import pages.BasePage;
 
-import java.math.BigInteger;
+import java.math.BigDecimal;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -22,18 +21,6 @@ public class CartTest extends BaseTest {
         assertEquals(getHeaderComponent().getAmountOfProductsInCart(), COUNT_OF_ITEMS_IN_THE_CART_AFTER_ADDED_ONE_ITEM_TO_THE_CART);
     }
 
-    @Test
-    public void checkAbilityToAddDifferentItemsToCart(){
-        getHeaderComponent().clickOnTheDealsLink();
-        getBasePage().waitForPageReadyState(10);
-        getDealsAndPromotionsPage().clickOnAllAddToCartButtons();
-
-        String expectedNumberInTheCart = String.valueOf(getDealsAndPromotionsPage().getNumberOfAddToCartButtonsOnThePage());
-
-        getBasePage().waitForElementTextBePresented(30, getHeaderComponent().getWebElementWithAmountOfProductsInCart(), expectedNumberInTheCart);
-
-        assertEquals(getHeaderComponent().getAmountOfProductsInCart(), expectedNumberInTheCart);
-    }
 
     @Test
     public void checkChangeNumberOfItemsInTheCart(){
@@ -47,12 +34,12 @@ public class CartTest extends BaseTest {
         getCartPage().clickOnTheQuantityButton();
 
         getBasePage().waitForElementVisibility(10, getCartPage().getQuantityDropDownList());
-        getCartPage().clickOnTheThreeItemsFromTheDropDownListOfQuantity();
+        getCartPage().clickOnTheTwoItemsFromTheDropDownListOfQuantity();
 
 
-        String expectedPricePerTwoUnits = new BigInteger(getCartPage().getPricePerUnit()).multiply(new BigInteger(getCartPage().getValueQuantityOfItems())).toString();
+        String expectedPricePerTwoUnits = new BigDecimal(getCartPage().getPricePerUnit()).multiply(new BigDecimal(getCartPage().getValueQuantityOfItems())).toString();
 
-        //getBasePage().waitForElementTextBePresented(10, getCartPage().getPricePerAll(), "");
+        getBasePage().waitForElementTextBePresented(10, getCartPage().getPricePerAllWebElement(), expectedPricePerTwoUnits);
 
         String actualPricePerAll = getCartPage().getPricePerAll();
 
