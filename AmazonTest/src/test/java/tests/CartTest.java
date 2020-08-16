@@ -1,11 +1,13 @@
 package tests;
 
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import pages.BasePage;
 
 import java.math.BigInteger;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 public class CartTest extends BaseTest {
 
@@ -34,7 +36,7 @@ public class CartTest extends BaseTest {
     }
 
     @Test
-    public void checkChangeNumberOfItemsInTheBasket(){
+    public void checkChangeNumberOfItemsInTheCart(){
         getHeaderComponent().clickOnTheDealsLink();
         getBasePage().waitForPageReadyState(10);
         getDealsAndPromotionsPage().clickOnTheFirstAddToCardButton();
@@ -57,4 +59,48 @@ public class CartTest extends BaseTest {
         assertEquals(actualPricePerAll, expectedPricePerTwoUnits);
 
     }
+
+
+    @Test
+    public void checkDeleteItemFromTheCart(){
+        getHeaderComponent().clickOnTheDealsLink();
+        getBasePage().waitForPageReadyState(10);
+        getDealsAndPromotionsPage().clickOnTheFirstAddToCardButton();
+        getBasePage().scrollToElement(getHeaderComponent().getCartButton());
+
+        getHeaderComponent().clickOnTheCartButton();
+        getBasePage().waitForPageReadyState(10);
+
+        getCartPage().clickOnTheDeleteButton();
+
+        WebElement emptyCart = getCartPage().getEmptyCartLabel();
+
+        getBasePage().waitForElementVisibility(10, emptyCart);
+
+        assertTrue(emptyCart.isDisplayed());
+
+    }
+
+
+    @Test
+    public void checkMoveItemToSaveForeLaterFromTheCart(){
+        getHeaderComponent().clickOnTheDealsLink();
+        getBasePage().waitForPageReadyState(10);
+        getDealsAndPromotionsPage().clickOnTheFirstAddToCardButton();
+        getBasePage().scrollToElement(getHeaderComponent().getCartButton());
+
+        getHeaderComponent().clickOnTheCartButton();
+        getBasePage().waitForPageReadyState(10);
+
+        String productTitleInCartText = getCartPage().getProductTitleInCartText();
+
+        getCartPage().clickOnTheSaveForeLaterButton();
+
+        getBasePage().waitForElementVisibility(10, getCartPage().getSavedForLaterLabel());
+
+        assertEquals(getCartPage().getProductTitleInSavedText(), productTitleInCartText);
+
+    }
+
+
 }

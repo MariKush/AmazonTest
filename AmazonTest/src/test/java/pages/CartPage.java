@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class CartPage extends BasePage{
+public class CartPage extends BasePage {
 
     @FindBy(xpath = "//span[@data-a-class='quantity']")
     private WebElement quantityButton;
@@ -24,31 +24,73 @@ public class CartPage extends BasePage{
     @FindBy(xpath = "//span[@id='sc-subtotal-amount-activecart']/span")
     private WebElement pricePerAllField;
 
+    @FindBy(xpath = "//input[@value='Delete']")
+    private WebElement deleteButton;
+
+    @FindBy(xpath = "//h2[contains(text(),'Your Amazon Cart is empty')]")
+    private WebElement emptyCartLabel;
+
+    @FindBy(xpath = "//input[@value='Save for later']")
+    private WebElement saveForLaterButton;
+
+    @FindBy(xpath = "//div[@id='sc-saved-cart-list-caption-text']")
+    private WebElement savedForLaterLabel;
+
+    @FindBy(xpath = "//div[@data-itemtype='active']//span[contains(@class,'sc-product-title')]")
+    private WebElement productTitleInCart;
+
+    @FindBy(xpath = "//div[@data-itemtype='saved']//span[contains(@class,'sc-product-title')]")
+    private WebElement productTitleInSaved;
+
     public CartPage(WebDriver driver) {
         super(driver);
     }
 
-    public void clickOnTheQuantityButton(){
+    public void clickOnTheQuantityButton() {
         quantityButton.click();
     }
 
-    public WebElement getQuantityDropDownList(){
+    public WebElement getQuantityDropDownList() {
         return quantityDropDownList;
     }
 
-    public void clickOnTheThreeItemsFromTheDropDownListOfQuantity(){
+    public void clickOnTheThreeItemsFromTheDropDownListOfQuantity() {
         threeItemsFromTheDropDownListOfQuantity.click();
     }
 
-    public String getValueQuantityOfItems(){
+    public String getValueQuantityOfItems() {
         return valueQuantityOfItemsField.getText();
     }
 
-    public String getPricePerUnit(){
-        return pricePerUnitField.getText().replaceAll("\\$", "").replaceAll(".","");
+    public String getPricePerUnit() {
+        return pricePerUnitField.getText().replaceAll("[^\\d.]", "");
     }
 
-    public String getPricePerAll(){
-        return pricePerAllField.getText().replaceAll("\\$", "").replaceAll(".","");
+    public String getPricePerAll() {
+        return pricePerAllField.getText().replaceAll("[^\\d.]", "");
+    }
+
+    public void clickOnTheDeleteButton() {
+        deleteButton.click();
+    }
+
+    public WebElement getEmptyCartLabel() {
+        return emptyCartLabel;
+    }
+
+    public void clickOnTheSaveForeLaterButton() {
+        saveForLaterButton.click();
+    }
+
+    public WebElement getSavedForLaterLabel() {
+        return savedForLaterLabel;
+    }
+
+    public String getProductTitleInCartText(){
+        return productTitleInCart.getText();
+    }
+
+    public String getProductTitleInSavedText(){
+        return productTitleInSaved.getText();
     }
 }
