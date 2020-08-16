@@ -50,6 +50,10 @@ public class CartPage extends BasePage {
         quantityButton.click();
     }
 
+    public WebElement getQuantityButton() {
+        return quantityButton;
+    }
+
     public WebElement getQuantityDropDownList() {
         return quantityDropDownList;
     }

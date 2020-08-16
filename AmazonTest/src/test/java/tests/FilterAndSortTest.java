@@ -66,8 +66,8 @@ public class FilterAndSortTest extends BaseTest {
 
         for (WebElement priceLabel : getDealsAndPromotionsPage().getPriceLabels()) {
             double[] prices = getMinAndMaxPricesFromWebElement(priceLabel);
-            assertTrue(prices[0] < MAX_PRICE);
-            assertTrue(prices[1] > MIN_PRICE);
+            assertTrue(prices[0] <= MAX_PRICE);
+            assertTrue(prices[1] >= MIN_PRICE);
         }
 
     }

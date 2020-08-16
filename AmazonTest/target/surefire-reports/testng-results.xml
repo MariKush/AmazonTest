@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="5" total="16" passed="10">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="165774" started-at="2020-08-16T22:01:41Z" finished-at="2020-08-16T22:04:27Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="165774" started-at="2020-08-16T22:01:41Z" finished-at="2020-08-16T22:04:27Z">
+      <class name="tests.BaseTest">
+        <test-method status="PASS" signature="profileSetUp()[pri:0, instance:tests.BaseTest@6cd8737]" name="profileSetUp" is-config="true" duration-ms="21" started-at="2020-08-16T22:01:41Z" finished-at="2020-08-16T22:01:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- profileSetUp -->
+      </class> <!-- tests.BaseTest -->
+      <class name="tests.CartTest">
+        <test-method status="PASS" signature="testsSetUp()[pri:0, instance:tests.CartTest@22f71333]" name="testsSetUp" is-config="true" duration-ms="9048" started-at="2020-08-16T22:01:41Z" finished-at="2020-08-16T22:01:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsSetUp -->
+        <test-method status="PASS" signature="checkAbilityToAddItemToCart()[pri:0, instance:tests.CartTest@22f71333]" name="checkAbilityToAddItemToCart" duration-ms="3131" started-at="2020-08-16T22:01:50Z" finished-at="2020-08-16T22:01:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkAbilityToAddItemToCart -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.CartTest@22f71333]" name="tearDown" is-config="true" duration-ms="167" started-at="2020-08-16T22:01:53Z" finished-at="2020-08-16T22:01:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="testsSetUp()[pri:0, instance:tests.CartTest@22f71333]" name="testsSetUp" is-config="true" duration-ms="7724" started-at="2020-08-16T22:01:53Z" finished-at="2020-08-16T22:02:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsSetUp -->
+        <test-method status="PASS" signature="checkChangeNumberOfItemsInTheCart()[pri:0, instance:tests.CartTest@22f71333]" name="checkChangeNumberOfItemsInTheCart" duration-ms="4689" started-at="2020-08-16T22:02:01Z" finished-at="2020-08-16T22:02:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkChangeNumberOfItemsInTheCart -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.CartTest@22f71333]" name="tearDown" is-config="true" duration-ms="4368" started-at="2020-08-16T22:02:06Z" finished-at="2020-08-16T22:02:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="testsSetUp()[pri:0, instance:tests.CartTest@22f71333]" name="testsSetUp" is-config="true" duration-ms="7567" started-at="2020-08-16T22:02:10Z" finished-at="2020-08-16T22:02:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsSetUp -->
+        <test-method status="PASS" signature="checkDeleteItemFromTheCart()[pri:0, instance:tests.CartTest@22f71333]" name="checkDeleteItemFromTheCart" duration-ms="5473" started-at="2020-08-16T22:02:18Z" finished-at="2020-08-16T22:02:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkDeleteItemFromTheCart -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.CartTest@22f71333]" name="tearDown" is-config="true" duration-ms="4378" started-at="2020-08-16T22:02:23Z" finished-at="2020-08-16T22:02:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="testsSetUp()[pri:0, instance:tests.CartTest@22f71333]" name="testsSetUp" is-config="true" duration-ms="7682" started-at="2020-08-16T22:02:28Z" finished-at="2020-08-16T22:02:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsSetUp -->
+        <test-method status="PASS" signature="checkMoveItemToSaveForeLaterFromTheCart()[pri:0, instance:tests.CartTest@22f71333]" name="checkMoveItemToSaveForeLaterFromTheCart" duration-ms="4677" started-at="2020-08-16T22:02:35Z" finished-at="2020-08-16T22:02:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkMoveItemToSaveForeLaterFromTheCart -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.CartTest@22f71333]" name="tearDown" is-config="true" duration-ms="4368" started-at="2020-08-16T22:02:40Z" finished-at="2020-08-16T22:02:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.CartTest -->
+      <class name="tests.ChooseOptionsTest">
+        <test-method status="PASS" signature="testsSetUp()[pri:0, instance:tests.ChooseOptionsTest@13969fbe]" name="testsSetUp" is-config="true" duration-ms="7825" started-at="2020-08-16T22:02:44Z" finished-at="2020-08-16T22:02:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsSetUp -->
+        <test-method status="PASS" signature="checkOpenSelectingOptionPopUp()[pri:0, instance:tests.ChooseOptionsTest@13969fbe]" name="checkOpenSelectingOptionPopUp" duration-ms="2606" started-at="2020-08-16T22:02:52Z" finished-at="2020-08-16T22:02:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkOpenSelectingOptionPopUp -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.ChooseOptionsTest@13969fbe]" name="tearDown" is-config="true" duration-ms="4378" started-at="2020-08-16T22:02:55Z" finished-at="2020-08-16T22:02:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.ChooseOptionsTest -->
+      <class name="tests.FilterAndSortTest">
+        <test-method status="PASS" signature="testsSetUp()[pri:0, instance:tests.FilterAndSortTest@6aaa5eb0]" name="testsSetUp" is-config="true" duration-ms="8533" started-at="2020-08-16T22:02:59Z" finished-at="2020-08-16T22:03:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsSetUp -->
+        <test-method status="FAIL" signature="checkFilteringByPriceRange()[pri:0, instance:tests.FilterAndSortTest@6aaa5eb0]" name="checkFilteringByPriceRange" duration-ms="4938" started-at="2020-08-16T22:03:08Z" finished-at="2020-08-16T22:03:13Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at tests.FilterAndSortTest.checkFilteringByPriceRange(FilterAndSortTest.java:69)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkFilteringByPriceRange -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.FilterAndSortTest@6aaa5eb0]" name="tearDown" is-config="true" duration-ms="4106" started-at="2020-08-16T22:03:13Z" finished-at="2020-08-16T22:03:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="testsSetUp()[pri:0, instance:tests.FilterAndSortTest@6aaa5eb0]" name="testsSetUp" is-config="true" duration-ms="7609" started-at="2020-08-16T22:03:17Z" finished-at="2020-08-16T22:03:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsSetUp -->
+        <test-method status="PASS" signature="checkSortByPriceLowToHigh()[pri:0, instance:tests.FilterAndSortTest@6aaa5eb0]" name="checkSortByPriceLowToHigh" duration-ms="5229" started-at="2020-08-16T22:03:24Z" finished-at="2020-08-16T22:03:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkSortByPriceLowToHigh -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.FilterAndSortTest@6aaa5eb0]" name="tearDown" is-config="true" duration-ms="4401" started-at="2020-08-16T22:03:29Z" finished-at="2020-08-16T22:03:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.FilterAndSortTest -->
+      <class name="tests.SearchTest">
+        <test-method status="PASS" signature="testsSetUp()[pri:0, instance:tests.SearchTest@3498ed]" name="testsSetUp" is-config="true" duration-ms="7798" started-at="2020-08-16T22:03:34Z" finished-at="2020-08-16T22:03:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsSetUp -->
+        <test-method status="PASS" signature="checkSearchResultWithNonExistentSearchWord()[pri:0, instance:tests.SearchTest@3498ed]" name="checkSearchResultWithNonExistentSearchWord" duration-ms="1626" started-at="2020-08-16T22:03:42Z" finished-at="2020-08-16T22:03:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkSearchResultWithNonExistentSearchWord -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.SearchTest@3498ed]" name="tearDown" is-config="true" duration-ms="4336" started-at="2020-08-16T22:03:43Z" finished-at="2020-08-16T22:03:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="testsSetUp()[pri:0, instance:tests.SearchTest@3498ed]" name="testsSetUp" is-config="true" duration-ms="7936" started-at="2020-08-16T22:03:48Z" finished-at="2020-08-16T22:03:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsSetUp -->
+        <test-method status="PASS" signature="checkThatUrlContainsSearchWord()[pri:0, instance:tests.SearchTest@3498ed]" name="checkThatUrlContainsSearchWord" duration-ms="3285" started-at="2020-08-16T22:03:56Z" finished-at="2020-08-16T22:03:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkThatUrlContainsSearchWord -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.SearchTest@3498ed]" name="tearDown" is-config="true" duration-ms="4099" started-at="2020-08-16T22:03:59Z" finished-at="2020-08-16T22:04:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.SearchTest -->
+      <class name="tests.SignInTest">
+        <test-method status="PASS" signature="testsSetUp()[pri:0, instance:tests.SignInTest@1a407d53]" name="testsSetUp" is-config="true" duration-ms="7564" started-at="2020-08-16T22:04:03Z" finished-at="2020-08-16T22:04:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsSetUp -->
+        <test-method status="PASS" signature="checkImpossibilityToSignInWithInvalidEmail()[pri:0, instance:tests.SignInTest@1a407d53]" name="checkImpossibilityToSignInWithInvalidEmail" duration-ms="1850" started-at="2020-08-16T22:04:11Z" finished-at="2020-08-16T22:04:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkImpossibilityToSignInWithInvalidEmail -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.SignInTest@1a407d53]" name="tearDown" is-config="true" duration-ms="4332" started-at="2020-08-16T22:04:12Z" finished-at="2020-08-16T22:04:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="testsSetUp()[pri:0, instance:tests.SignInTest@1a407d53]" name="testsSetUp" is-config="true" duration-ms="7852" started-at="2020-08-16T22:04:17Z" finished-at="2020-08-16T22:04:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsSetUp -->
+        <test-method status="PASS" signature="checkImpossibilityToSignInWithInvalidMobile()[pri:0, instance:tests.SignInTest@1a407d53]" name="checkImpossibilityToSignInWithInvalidMobile" duration-ms="1945" started-at="2020-08-16T22:04:25Z" finished-at="2020-08-16T22:04:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkImpossibilityToSignInWithInvalidMobile -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.SignInTest@1a407d53]" name="tearDown" is-config="true" duration-ms="173" started-at="2020-08-16T22:04:27Z" finished-at="2020-08-16T22:04:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.SignInTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

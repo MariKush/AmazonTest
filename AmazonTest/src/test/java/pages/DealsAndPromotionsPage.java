@@ -37,13 +37,17 @@ public class DealsAndPromotionsPage extends BasePage {
         return firstChooseOptionsButton;
     }
 
+    public void clickOnTheFirstChooseOptionsButton() {
+        scrollToElement(firstChooseOptionsButton);
+        firstChooseOptionsButton.click();
+    }
+
     public void clickOnTheFirstAddToCardButton() {
         firstAddToCartButton.click();
     }
 
-    public void clickOnTheFirstChooseOptionsButton() {
-        scrollToElement(firstChooseOptionsButton);
-        firstChooseOptionsButton.click();
+    public WebElement getFirstAddToCardButton(){
+        return firstAddToCartButton;
     }
 
     public void clickOnTheSortByButton() {
