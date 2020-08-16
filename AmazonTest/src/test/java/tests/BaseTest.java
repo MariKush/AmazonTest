@@ -36,6 +36,10 @@ public class BaseTest {
         return new CartPage(driver);
     }
 
+    public SearchedPage getSearchedPage(){
+        return new SearchedPage(driver);
+    }
+
     @BeforeTest
     public void profileSetUp() {
         System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
