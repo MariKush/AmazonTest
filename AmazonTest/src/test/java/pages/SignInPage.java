@@ -21,15 +21,16 @@ public class SignInPage extends BasePage {
         super(driver);
     }
 
-    public void enterEmailOrMobile(String text){
+    public void enterEmailOrMobile(String text) {
         emailOrMobileInput.sendKeys(text, ENTER);
     }
 
-    public WebElement getErrorMessageBox(){
+    public WebElement getErrorMessageBox() {
         return errorMessageBox;
     }
 
     public String getErrorContentLabelText() {
         return errorContentLabel.getText();
     }
+
 }

@@ -70,12 +70,16 @@ public class CartPage extends BasePage {
         return pricePerAllField.getText().replaceAll("[^\\d.]", "");
     }
 
-    public WebElement getPricePerAllWebElement(){
+    public WebElement getPricePerAllWebElement() {
         return pricePerAllField;
     }
 
     public void clickOnTheDeleteButton() {
         deleteButton.click();
+    }
+
+    public WebElement getDeleteButton() {
+        return deleteButton;
     }
 
     public WebElement getEmptyCartLabel() {
@@ -90,11 +94,11 @@ public class CartPage extends BasePage {
         return savedForLaterLabel;
     }
 
-    public String getProductTitleInCartText(){
+    public String getProductTitleInCartText() {
         return productTitleInCart.getText();
     }
 
-    public String getProductTitleInSavedText(){
+    public String getProductTitleInSavedText() {
         return productTitleInSaved.getText();
     }
 }

@@ -12,6 +12,7 @@ public class FilterAndSortTest extends BaseTest {
 
     private static final Double MIN_PRICE = 50d;
     private static final Double MAX_PRICE = 100d;
+    private static final String SEPARATOR = "-";
 
     private double getPriceByString(String price) {
         return Double.parseDouble(price.replaceAll("[^\\d.]", ""));
@@ -20,19 +21,18 @@ public class FilterAndSortTest extends BaseTest {
     private List<Double> getPricesFromWebElements(List<WebElement> elements) {
         return elements.stream()
                 .map(WebElement::getText)
-                .map(element -> element.split("-")[0])
+                .map(element -> element.split(SEPARATOR)[0])
                 .map(this::getPriceByString)
                 .collect(Collectors.toList());
     }
 
     private double[] getMinAndMaxPricesFromWebElement(WebElement webElement) {
-        String[] minAndMaxPrices = webElement.getText().split("-");
+        String[] minAndMaxPrices = webElement.getText().split(SEPARATOR);
         double minPrice = getPriceByString(minAndMaxPrices[0]);
         double maxPrice;
         if (minAndMaxPrices.length == 2) {
             maxPrice = getPriceByString(minAndMaxPrices[1]);
-        }
-        else {
+        } else {
             maxPrice = minPrice;
         }
         return new double[]{minPrice, maxPrice};
@@ -50,7 +50,6 @@ public class FilterAndSortTest extends BaseTest {
         getBasePage().waitForElementVisibility(10, getDealsAndPromotionsPage().getSortByButton());
 
         List<Double> prices = getPricesFromWebElements(getDealsAndPromotionsPage().getPriceLabels());
-
         for (int i = 1; i < prices.size(); i++) {
             assertTrue(prices.get(i - 1) <= prices.get(i));
         }
@@ -70,7 +69,6 @@ public class FilterAndSortTest extends BaseTest {
             assertTrue(prices[0] < MAX_PRICE);
             assertTrue(prices[1] > MIN_PRICE);
         }
-
 
     }
 }

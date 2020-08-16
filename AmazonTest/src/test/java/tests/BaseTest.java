@@ -20,11 +20,7 @@ public class BaseTest {
         return new BasePage(driver);
     }
 
-    public HomePage getHomePage() {
-        return new HomePage(driver);
-    }
-
-    public DealsAndPromotionsPage getDealsAndPromotionsPage(){
+    public DealsAndPromotionsPage getDealsAndPromotionsPage() {
         return new DealsAndPromotionsPage(driver);
     }
 
@@ -32,19 +28,19 @@ public class BaseTest {
         return new HeaderComponent(driver);
     }
 
-    public CartPage getCartPage(){
+    public CartPage getCartPage() {
         return new CartPage(driver);
     }
 
-    public SignInPage getSignInPage(){
+    public SignInPage getSignInPage() {
         return new SignInPage(driver);
     }
 
-    public SearchedPage getSearchedPage(){
+    public SearchedPage getSearchedPage() {
         return new SearchedPage(driver);
     }
 
-    public ChooseOptionsPopUpComponent getChooseOptionsPopUpComponent(){
+    public ChooseOptionsPopUpComponent getChooseOptionsPopUpComponent() {
         return new ChooseOptionsPopUpComponent(driver);
     }
 

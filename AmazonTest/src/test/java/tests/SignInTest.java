@@ -15,28 +15,26 @@ public class SignInTest extends BaseTest {
 
 
     @Test
-    public void checkImpossibilityToSignInWithInvalidEmail(){
+    public void checkImpossibilityToSignInWithInvalidEmail() {
         getHeaderComponent().clickOnTheAccountButton();
         getBasePage().waitForPageReadyState(10);
         getSignInPage().enterEmailOrMobile(INVALID_EMAIL);
-        getBasePage().waitForElementVisibility(10,getSignInPage().getErrorMessageBox());
+        getBasePage().waitForElementVisibility(10, getSignInPage().getErrorMessageBox());
 
         assertTrue(getSignInPage().getErrorContentLabelText().contains(ERROR_MESSAGE_FORE_INVALID_EMAIL));
 
     }
 
     @Test
-    public void checkImpossibilityToSignInWithInvalidMobile(){
+    public void checkImpossibilityToSignInWithInvalidMobile() {
         getHeaderComponent().clickOnTheAccountButton();
         getBasePage().waitForPageReadyState(10);
         getSignInPage().enterEmailOrMobile(INVALID_MOBILE);
-        getBasePage().waitForElementVisibility(10,getSignInPage().getErrorMessageBox());
+        getBasePage().waitForElementVisibility(10, getSignInPage().getErrorMessageBox());
 
         assertTrue(getSignInPage().getErrorContentLabelText().contains(ERROR_MESSAGE_FORE_INVALID_MOBILE));
 
     }
-
-
 
 
 }

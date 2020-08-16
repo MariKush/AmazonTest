@@ -6,9 +6,7 @@ import static org.testng.Assert.assertTrue;
 
 public class ChooseOptionsTest extends BaseTest {
 
-
     private static final String HEADER_TEXT = "Deal details";
-
 
     @Test
     public void checkOpenSelectingOptionPopUp() {

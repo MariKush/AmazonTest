@@ -37,10 +37,6 @@ public class DealsAndPromotionsPage extends BasePage {
         return firstChooseOptionsButton;
     }
 
-    public int getNumberOfAddToCartButtonsOnThePage() {
-        return addToCartButtons.size();
-    }
-
     public void clickOnTheFirstAddToCardButton() {
         firstAddToCartButton.click();
     }

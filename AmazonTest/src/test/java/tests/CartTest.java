@@ -13,7 +13,7 @@ public class CartTest extends BaseTest {
     private static final String COUNT_OF_ITEMS_IN_THE_CART_AFTER_ADDED_ONE_ITEM_TO_THE_CART = "1";
 
     @Test
-    public void checkAbilityToAddItemToCart(){
+    public void checkAbilityToAddItemToCart() {
         getHeaderComponent().clickOnTheDealsLink();
         getBasePage().waitForPageReadyState(10);
         getDealsAndPromotionsPage().clickOnTheFirstAddToCardButton();
@@ -23,7 +23,7 @@ public class CartTest extends BaseTest {
 
 
     @Test
-    public void checkChangeNumberOfItemsInTheCart(){
+    public void checkChangeNumberOfItemsInTheCart() {
         getHeaderComponent().clickOnTheDealsLink();
         getBasePage().waitForPageReadyState(10);
         getDealsAndPromotionsPage().clickOnTheFirstAddToCardButton();
@@ -31,16 +31,13 @@ public class CartTest extends BaseTest {
 
         getHeaderComponent().clickOnTheCartButton();
         getBasePage().waitForPageReadyState(10);
-        getCartPage().clickOnTheQuantityButton();
 
+        getCartPage().clickOnTheQuantityButton();
         getBasePage().waitForElementVisibility(10, getCartPage().getQuantityDropDownList());
         getCartPage().clickOnTheTwoItemsFromTheDropDownListOfQuantity();
 
-
         String expectedPricePerTwoUnits = new BigDecimal(getCartPage().getPricePerUnit()).multiply(new BigDecimal(getCartPage().getValueQuantityOfItems())).toString();
-
         getBasePage().waitForElementTextBePresented(10, getCartPage().getPricePerAllWebElement(), expectedPricePerTwoUnits);
-
         String actualPricePerAll = getCartPage().getPricePerAll();
 
         assertEquals(actualPricePerAll, expectedPricePerTwoUnits);
@@ -49,7 +46,7 @@ public class CartTest extends BaseTest {
 
 
     @Test
-    public void checkDeleteItemFromTheCart(){
+    public void checkDeleteItemFromTheCart() {
         getHeaderComponent().clickOnTheDealsLink();
         getBasePage().waitForPageReadyState(10);
         getDealsAndPromotionsPage().clickOnTheFirstAddToCardButton();
@@ -57,11 +54,11 @@ public class CartTest extends BaseTest {
 
         getHeaderComponent().clickOnTheCartButton();
         getBasePage().waitForPageReadyState(10);
+        getBasePage().waitForElementVisibility(10, getCartPage().getDeleteButton());
 
         getCartPage().clickOnTheDeleteButton();
 
         WebElement emptyCart = getCartPage().getEmptyCartLabel();
-
         getBasePage().waitForElementVisibility(10, emptyCart);
 
         assertTrue(emptyCart.isDisplayed());
@@ -70,7 +67,7 @@ public class CartTest extends BaseTest {
 
 
     @Test
-    public void checkMoveItemToSaveForeLaterFromTheCart(){
+    public void checkMoveItemToSaveForeLaterFromTheCart() {
         getHeaderComponent().clickOnTheDealsLink();
         getBasePage().waitForPageReadyState(10);
         getDealsAndPromotionsPage().clickOnTheFirstAddToCardButton();
@@ -80,9 +77,7 @@ public class CartTest extends BaseTest {
         getBasePage().waitForPageReadyState(10);
 
         String productTitleInCartText = getCartPage().getProductTitleInCartText();
-
         getCartPage().clickOnTheSaveForeLaterButton();
-
         getBasePage().waitForElementVisibility(10, getCartPage().getSavedForLaterLabel());
 
         assertEquals(getCartPage().getProductTitleInSavedText(), productTitleInCartText);

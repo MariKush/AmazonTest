@@ -1,0 +1,14 @@
+<suite name="PositiveTests" verbose="1">
+    <test name="AmazonTest">
+        <classes>
+            <class name="tests.CartTest" />
+            <class name="tests.ChooseOptionsTest" />
+            <class name="tests.FilterAndSortTest" />
+            <class name="tests.SearchTest">
+                <methods>
+                    <include name="checkThatUrlContainsSearchWord"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

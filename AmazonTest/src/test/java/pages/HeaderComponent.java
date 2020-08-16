@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 import static org.openqa.selenium.Keys.ENTER;
 
-public class HeaderComponent extends BasePage{
+public class HeaderComponent extends BasePage {
 
     @FindBy(xpath = "//input[@id='twotabsearchtextbox']")
     private WebElement searchInput;
@@ -27,11 +27,11 @@ public class HeaderComponent extends BasePage{
         super(driver);
     }
 
-    public void enterTextIntoSearchInput(String text){
+    public void enterTextIntoSearchInput(String text) {
         searchInput.sendKeys(text, ENTER);
     }
 
-    public void clickOnTheDealsLink(){
+    public void clickOnTheDealsLink() {
         dealsLink.click();
     }
 
@@ -39,22 +39,20 @@ public class HeaderComponent extends BasePage{
         return amountOfProductsInCart.getText();
     }
 
-    public WebElement getWebElementWithAmountOfProductsInCart(){
+    public WebElement getWebElementWithAmountOfProductsInCart() {
         return amountOfProductsInCart;
     }
 
-    public void clickOnTheCartButton(){
+    public void clickOnTheCartButton() {
         cartButton.click();
     }
 
-    public WebElement getCartButton(){
+    public WebElement getCartButton() {
         return cartButton;
     }
 
-    public void clickOnTheAccountButton(){
+    public void clickOnTheAccountButton() {
         accountButton.click();
     }
-
-
 
 }

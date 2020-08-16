@@ -1,0 +1,12 @@
+<suite name="NegativeTests" verbose="1">
+    <test name="AmazonTest">
+        <classes>
+            <class name="tests.SearchTest">
+                <methods>
+                    <include name="checkSearchResultWithNonExistentSearchWord"/>
+                </methods>
+            </class>
+            <class name="tests.SignInTest"/>
+        </classes>
+    </test>
+</suite>
