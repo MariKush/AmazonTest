@@ -16,12 +16,18 @@ public class DealsAndPromotionsPage extends BasePage {
 
     @FindBy(xpath = "(//button[contains(text(),'Choose options')])[1]")
     private WebElement firstChooseOptionsButton;
+
     @FindBy(xpath = "//div[@id='FilterItemView_sortOrder_dropdown']//span[@data-action='a-dropdown-button']")
     private WebElement sortByButton;
+
     @FindBy(xpath = "//div[@aria-hidden='false']//a[contains(text(),'Price - Low to High')]")
     private WebElement sortByPriceLowToHighButton;
+
     @FindBy(xpath = "//span[contains(@class,'dealPriceText')]")
     private List<WebElement> priceLabels;
+
+    @FindBy(xpath = "//div[@data-value='50-100']/a")
+    private WebElement from50To100DollarsButton;
 
     public DealsAndPromotionsPage(WebDriver driver) {
         super(driver);
@@ -65,6 +71,14 @@ public class DealsAndPromotionsPage extends BasePage {
 
     public WebElement getSortByButton() {
         return sortByButton;
+    }
+
+    public void clickOnTheFrom50To100DollarsButton(){
+        from50To100DollarsButton.click();
+    }
+
+    public WebElement getFrom50To100DollarsButton(){
+        return from50To100DollarsButton;
     }
 
 }
